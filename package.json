@@ -1,0 +1,35 @@
+{
+  "name": "grunt-make",
+  "version": "0.0.0",
+  "description": "A Grunt plugin to simplify interoperation between Grunt and Make",
+  "main": "tasks/make.js",
+  "scripts": {
+    "test": "mocha",
+    "watch": "mocha watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/aearly/grunt-make"
+  },
+  "keywords": [
+    "grunt",
+    "gruntplugin",
+    "make",
+    "makefile"
+  ],
+  "author": "Alexander Early",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aearly/grunt-make/issues"
+  },
+  "homepage": "https://github.com/aearly/grunt-make",
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-cli": "0.1.13",
+    "grunt-release": "0.7.0",
+    "mocha": "1.21.5"
+  },
+  "peerDependencies": {
+    "grunt": ">=0.4.5"
+  }
+}
