@@ -5,11 +5,15 @@ var
   testFile = __dirname + "/example/somefile.js";
 
 describe("grunt-make", function () {
-  beforeEach(function () {
+
+  function removeFile() {
     try {
       fs.unlinkSync(testFile);
     } catch (e) {}
-  });
+  }
+
+  beforeEach(removeFile);
+  after(removeFile);
 
   it("should work with a basic task name", function (done) {
     exec("grunt --gruntfile ./test/example/Gruntfile.js make:echo",
