@@ -1,6 +1,6 @@
 {
   "name": "grunt-make",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A Grunt plugin to simplify interoperation between Grunt and Make",
   "main": "tasks/make.js",
   "scripts": {
