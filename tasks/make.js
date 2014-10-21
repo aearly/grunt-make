@@ -3,22 +3,12 @@ var
 
 module.exports = function (grunt) {
   grunt.registerTask("make", "automatically call Make targets", function () {
-    var done = this.async(),
-      numTargets = arguments.length;
+    var done = this.async();
 
-    function targetDone() {
-      numTargets -= 1;
-      if (numTargets === 0) {
-        done();
-      }
-    }
-
-    [].forEach.call(arguments, function (target) {
-      exec("make " + target, function (err, stdout) {
-        if (err) { done(err); }
-        console.log(stdout);
-        targetDone();
-      });
+    exec("make " + [].join.call(arguments, " "), function (err, stdout) {
+      if (err) { done(err); }
+      console.log(stdout);
+      done();
     });
   });
 };
